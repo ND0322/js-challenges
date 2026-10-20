@@ -1,7 +1,7 @@
 // Expected Output: "Perfect score achieved!" followed by "Student scored: 100"
 
 function processExamResults(score, bonusPoints) {
-    let finalScore = score + bonusPoints;
+    let finalScore =Number(bonusPoints) + score;
     
     // Check for a perfect score
     if (finalScore == "100") {

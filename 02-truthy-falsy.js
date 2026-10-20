@@ -3,7 +3,7 @@
 function initializePlayer(username, startingExtraLives) {
     // If no values are provided, fall back to defaults
     let name = username || "Guest";
-    let extraLives = startingExtraLives || 3;
+    let extraLives = startingExtraLives != null ? startingExtraLives : 3;
     
     console.log(name + " starts with " + extraLives + " extra lives.");
 }

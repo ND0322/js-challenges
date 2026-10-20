@@ -10,4 +10,5 @@ for (let key in highScores) {
     total += highScores[key];
 }
 
-console.log("Average score: " + total / highScores.length);
+
+console.log("Average score: " + total / Object.keys(highScores).length);
