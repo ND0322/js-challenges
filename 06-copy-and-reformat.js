@@ -10,6 +10,25 @@ primitives or other objects with the same limitations (ie. no arrays, sets, etc.
 
 function copyFormatted(obj) {
     // implement here
+    
+    const fixed = {};
+
+    for(let key in obj) fixed[key] = obj[key];
+
+    for(let key in obj){
+        if(typeof(obj[key]) == "string"){
+            fixed[key] = obj[key].toLowerCase();
+        }
+        else if(typeof(obj[key]) == "number"){
+            fixed[key] = +obj[key].toFixed(2);
+        }
+        else if(typeof(obj[key]) !== "boolean"){
+            fixed[key] = copyFormatted(obj[key]);
+        }
+    }
+
+    return fixed;
+    
     return null;
 }
 
